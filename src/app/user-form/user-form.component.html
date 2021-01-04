@@ -1,0 +1,25 @@
+<div class="form">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <label>
+            Nom :
+            <input type="text" formControlName="name">
+        </label>
+        <label>
+            Email :
+            <input type="mail" formControlName="email">
+        </label>
+        <label>
+            Password :
+            <input type="password" formControlName="password">
+        </label>
+        <div formGroupName="adress" class="address">
+            <label>
+                Adresse :
+                <input type="text" formControlName="street" value="Street">
+                <input type="number" formControlName="zipCode" value="zipCode">
+                <input type="text" formControlName="city" vaue="city">
+            </label>
+        </div>
+        <button type="submit">S'enregistrer !</button>
+    </form>
+</div>
